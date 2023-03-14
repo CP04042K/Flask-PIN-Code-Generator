@@ -53,6 +53,11 @@ probably_public_bits = [
 ]
 
 private_bits = [
+    str(uuid.getnode()), # the MAC address is actually from this function call, but can be obtained via an alternative way
+    get_machine_id()
+]
+
+private_bits = [
     str(int("0242ac1a0002", 16)), # MAC address striped ":" and converted to decimal
     get_machine_id()
 ]
